@@ -14,3 +14,8 @@ npm run dev
 ```
 
 As for backend, u have to put game onto slot, but we already made it, so you only need to launch frontend.
+
+<br>
+<br>
+
+created with [Ilya Rogovenko](https://github.com/rogovenko)
