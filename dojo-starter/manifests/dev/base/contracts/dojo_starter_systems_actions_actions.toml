@@ -1,0 +1,9 @@
+kind = "DojoContract"
+class_hash = "0x7160bcf2ae6b5a8c22a262c92ae6fdcf320ecf0b027ea66876c9503d5c0e2b3"
+original_class_hash = "0x7160bcf2ae6b5a8c22a262c92ae6fdcf320ecf0b027ea66876c9503d5c0e2b3"
+base_class_hash = "0x0"
+abi = "manifests/dev/abis/base/contracts/dojo_starter_systems_actions_actions.json"
+reads = []
+writes = []
+computed = []
+name = "dojo_starter::systems::actions::actions"

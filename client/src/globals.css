@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  @apply h-full w-full m-0 p-0;
+}
+
+.full-select-none {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+}
+
+body {
+  @apply
+  min-w-full
+  flex
+  flex-col
+  bg-cover
+  bg-center
+  bg-fixed
+  bg-[url("/src/assets/bg.webp")]
+  select-none
+  full-select-none;
+}
+
+@media (max-width: 992px) {
+}
+
+@media (min-width: 993px) {
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(5px);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s forwards;
+}
+
+.big-window-msg {
+  @apply flex flex-col justify-center items-center bg-white;
+}
+
+
+@keyframes progressBar {
+  0% {
+    @apply h-0;
+  }
+  100% {
+    @apply h-full;
+  }
+}
+
+.animated-bg {
+  @apply bg-gray-500 bg-opacity-50 relative overflow-hidden;
+}
+
+.animated-bg::before {
+  content: '';
+  @apply absolute left-0 bottom-0 w-full h-0 bg-blue-500;
+  z-index: 0;
+}
+
+.animate-bg-transition::before {
+  @apply h-full;
+  animation: progressBar 3s ease-in-out forwards;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.default-button {
+  @apply px-2 py-1 bg-amber-950 text-white rounded-lg shadow-lg;
+}
+
+.default-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.debug-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.debug-button {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  z-index: 1000;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+.loader {
+  border-top-color: #3498db;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.debug-panel button{
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  width: fit-content;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
